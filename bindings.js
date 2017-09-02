@@ -148,6 +148,13 @@ exports.getFileName = function getFileName (calling_file) {
  */
 
 exports.getRoot = function getRoot (file) {
+  var module_dir = __dirname;
+  var cur_cwd = process.cwd();
+
+  if (!(module_dir.indexOf(cur_cwd) > -1)) {
+    return cur_cwd;
+  }
+
   var dir = dirname(file)
     , prev
   while (true) {
