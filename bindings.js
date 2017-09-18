@@ -32,6 +32,8 @@ var fs = require('fs')
         , [ 'module_root', 'build', 'default', 'bindings' ]
           // Production "Release" buildtype binary (meh...)
         , [ 'module_root', 'compiled', 'version', 'platform', 'arch', 'bindings' ]
+          // jw.yi@astams.com 2017-09-18 : Support bcrypt lib's pre-built binding
+        , [ 'module_root', 'lib', 'binding', 'bindings' ]
         ]
     }
 
